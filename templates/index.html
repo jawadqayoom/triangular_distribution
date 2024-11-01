@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangular Distribution Simulation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f9fc;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            width: 100%;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Triangular Distribution Simulation
+        </div>
+        <div class="card-body">
+            <form action="/simulate" method="post">
+                <div class="form-group">
+                    <label for="a">Minimum Value (a):</label>
+                    <input type="number" id="a" name="a" class="form-control" required placeholder="Enter minimum value (e.g., 1000)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="b">Maximum Value (b):</label>
+                    <input type="number" id="b" name="b" class="form-control" required placeholder="Enter maximum value (e.g., 6000)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="c">Peak Value (c):</label>
+                    <input type="number" id="c" name="c" class="form-control" required placeholder="Enter peak value (e.g., 3000)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="threshold">Threshold Value:</label>
+                    <input type="number" id="threshold" name="threshold" class="form-control" required placeholder="Enter threshold value (e.g., 2000)">
+                </div>
+                
+                <button type="submit" class="btn btn-primary mt-3">Simulate</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
